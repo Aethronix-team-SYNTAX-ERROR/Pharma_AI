@@ -3,6 +3,8 @@ import axios from "axios";
 import HumanBody from "./HumanBody";
 import "./App.css";
 import ChatBox from "./ChatBox";
+import MoleculeViewer from "./MoleculeViewer";
+
 
 
 const API = process.env.REACT_APP_API_URL || "http://localhost:5000";
@@ -43,6 +45,7 @@ export default function App() {
             <p>{analysis.bindingScore}</p>
             <p>{analysis.hypothesis}</p>
         <ChatBox drug={analysis?.name} />
+        <MoleculeViewer name={analysis?.name} />
           </>
         )}
       </div>
