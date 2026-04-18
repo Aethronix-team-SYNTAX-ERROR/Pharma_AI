@@ -5,10 +5,11 @@ const cors = require("cors");
 const drugRoutes = require("./routes/drugRoutes");
 
 const app = express();
+const chatRoutes = require("./routes/chatRoutes");
 
 app.use(cors());
 app.use(express.json());
-
+app.use("/api/chat", chatRoutes);
 app.use("/api/drugs", drugRoutes);
 
 app.get("/", (req, res) => {
