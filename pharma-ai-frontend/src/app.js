@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import HumanBody from "./HumanBody";
 import "./App.css";
+import ChatBox from "./ChatBox";
+
 
 const API = process.env.REACT_APP_API_URL || "http://localhost:5000";
 
@@ -40,6 +42,7 @@ export default function App() {
             <p>{analysis.disease}</p>
             <p>{analysis.bindingScore}</p>
             <p>{analysis.hypothesis}</p>
+        <ChatBox drug={analysis?.name} />
           </>
         )}
       </div>
