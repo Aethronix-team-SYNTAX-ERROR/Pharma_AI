@@ -1,7 +1,7 @@
 body {
   margin: 0;
-  font-family: "Inter", sans-serif;
-  background: #F8FAFC;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(135deg, #f8fafc, #e0f7ff);
 }
 
 /* Layout */
@@ -12,33 +12,23 @@ body {
 
 /* Sidebar */
 .sidebar {
-  width: 250px;
+  width: 260px;
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(20px);
   padding: 20px;
-  background: #ADD8E6;
-  overflow-y: auto;
+  border-right: 1px solid rgba(0,0,0,0.1);
 }
 
-.drug {
-  padding: 10px;
+.sidebar div {
+  padding: 12px;
   border-radius: 20px;
-  cursor: pointer;
   margin-bottom: 8px;
+  cursor: pointer;
   transition: 0.3s;
 }
 
-.drug:hover {
-  background: #ffffff70;
-}
-
-.activeDrug {
+.sidebar div:hover {
   background: #FFC1CC;
-}
-
-/* Glass effect */
-.glass {
-  backdrop-filter: blur(20px);
-  border-radius: 32px;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.1);
 }
 
 /* Main */
@@ -47,56 +37,18 @@ body {
   padding: 30px;
 }
 
-/* Organs */
-.organContainer {
-  display: flex;
-  gap: 15px;
-  margin: 20px 0;
+/* Cards */
+.card {
+  background: rgba(255,255,255,0.6);
+  backdrop-filter: blur(20px);
+  padding: 20px;
+  border-radius: 24px;
+  margin-top: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
 
-.organCard {
-  padding: 15px;
-  border-radius: 20px;
-  background: white;
-}
-
-/* Glow effect */
-.glow {
+/* Glow */
+.active {
   background: #FFC1CC;
   box-shadow: 0 0 25px #FFC1CC;
-}
-
-/* Cards */
-.cards {
-  display: flex;
-  gap: 20px;
-}
-
-.card {
-  flex: 1;
-  padding: 20px;
-}
-
-/* Circle */
-.circle {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  background: #ADD8E6;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-}
-
-/* Typewriter effect */
-.typewriter {
-  overflow: hidden;
-  white-space: nowrap;
-  animation: typing 4s steps(40, end);
-}
-
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
 }
